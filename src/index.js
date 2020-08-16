@@ -7,7 +7,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import StoreContext from './StoreContext';
 
-let rerenderEntireTree = (state) => {
+let rerenderEntireTree = () => {
   ReactDOM.render(
     <BrowserRouter>
       <StoreContext.Provider value={ store }>
@@ -18,11 +18,10 @@ let rerenderEntireTree = (state) => {
   );
 }
 
-rerenderEntireTree( store.getState() );
+rerenderEntireTree();
 
 store.subscribe( () => {
-  let state = store.getState();
-  rerenderEntireTree(state);
+  rerenderEntireTree();
 } );
 
 
