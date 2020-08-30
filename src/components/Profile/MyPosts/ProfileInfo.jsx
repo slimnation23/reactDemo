@@ -18,6 +18,9 @@ const ProfileInfo = (props) => {
                 <img src={props.profile.photos.small} />
                 <div>
                     <p>Про себе: {props.profile.aboutMe}</p>
+                    <p>Contacts: {props.profile.contacts.facebook}</p>
+                    <p>Looking for a job: {props.profile.lookingForAJobDescription}</p>
+                    <p>Full Name: {props.profile.fullName}</p>   
                 </div>
             </div>
         </div>
