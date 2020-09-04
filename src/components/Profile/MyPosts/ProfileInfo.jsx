@@ -11,7 +11,7 @@ const ProfileInfo = (props) => {
     return (
         <div>
             <div>
-                <img className={s.img} src="https://images.pexels.com/photos/3672776/pexels-photo-3672776.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+                <img className={s.img} src="https://images.pexels.com/photos/3672776/pexels-photo-3672776.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
                 <h3>My posts</h3>
             </div>
             <div>
