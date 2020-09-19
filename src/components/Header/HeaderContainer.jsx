@@ -10,7 +10,6 @@ class HeaderContainer extends React.Component {
             withCredentials: true
         })
         .then(response => {
-            debugger
             if (response.data.resultCode === 0) {
                 alert('Hello!!!');
                 let {id, login, email} = response.data.data;
