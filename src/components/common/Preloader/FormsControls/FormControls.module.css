@@ -6,3 +6,7 @@
 .formControl.error span {
     color: red;
 }
+.formSummaryError {
+    border: 2px solid red;
+    padding: 5pxdispatch(stopSubmit('login', { _error: 'Common error' }));;
+}

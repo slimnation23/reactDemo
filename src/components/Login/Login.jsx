@@ -5,9 +5,10 @@ import { Field, reduxForm } from 'redux-form';
 import { login } from '../../redux/authReducer';
 import { required } from '../../utils/validators';
 import { Input } from '../common/Preloader/FormsControls/FormControls';
+import s from '../common/Preloader/FormsControls/FormControls.module.css';
 
 const LoginForm = (props) => {
-    
+
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
@@ -17,8 +18,12 @@ const LoginForm = (props) => {
                 <Field placeholder={'Password'} type='password' validate={required} name={'password'} component={Input} />
             </div>
             <div>
-                <Field component={Input} type={'checkbox'} validate={required} name={'rememberMe'} /> remember me 
+                <Field component={Input} type={'checkbox'} validate={required} name={'rememberMe'} /> remember me
             </div>
+            { props.error && <div className={s.formSummaryError}>
+                {props.error}
+            </div>
+            }
             <div>
                 <button>Login</button>
             </div>
@@ -26,7 +31,7 @@ const LoginForm = (props) => {
     )
 }
 
-const LoginReduxForm = reduxForm({form: 'login'})(LoginForm)
+const LoginReduxForm = reduxForm({ form: 'login' })(LoginForm)
 
 const Login = (props) => {
     let onSubmit = (formData) => {
@@ -38,8 +43,8 @@ const Login = (props) => {
     }
     return (<div>
         <h1>Login</h1>
-        <LoginReduxForm onSubmit={ onSubmit } />
-        </div>
+        <LoginReduxForm onSubmit={onSubmit} />
+    </div>
     )
 }
 
@@ -47,4 +52,4 @@ const mapStateToProps = (state) => ({
     isAuth: state.auth.isAuth
 })
 
-export default connect(mapStateToProps, {login} ) (Login);
+export default connect(mapStateToProps, { login })(Login);
