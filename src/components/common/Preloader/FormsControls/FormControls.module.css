@@ -1,0 +1,12 @@
+.formControl.error input,
+.formControl.error textarea {
+    border: 1px solid red
+}
+
+.formControl.error span {
+    color: red;
+}
+.formSummaryError {
+    border: 2px solid red;
+    padding: 5pxdispatch(stopSubmit('login', { _error: 'Common error' }));;
+}
