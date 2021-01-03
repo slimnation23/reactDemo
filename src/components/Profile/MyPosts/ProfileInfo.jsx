@@ -5,7 +5,6 @@ import ProfileStatusWithHooks from './Post/ProfileStatusWithHooks';
 import s from './ProfileInfo.module.css';
 
 const ProfileInfo = (props) => {
-
     if (!props.profile) {
         return <Preloader />
     }
