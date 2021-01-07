@@ -33,19 +33,3 @@
 .name h1 {
     margin: 0;
 }
-
-ul {
-    list-style: none;
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-ul li {
-    margin-right: 15px;
-    cursor: pointer;
-}
-
-.selectedPage {
-    font-weight: 700;
-}
