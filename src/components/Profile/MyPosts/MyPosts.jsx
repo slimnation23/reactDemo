@@ -48,6 +48,9 @@ const MyPosts = React.memo(props => {
 
     return (
         <div className={s.posts}>
+            <div>
+                <h3>My posts</h3>
+            </div>
             <div className={s.content}>
                 <AddNewPostReduxForm onSubmit={onAddPost} />
             </div>
